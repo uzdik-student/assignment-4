@@ -6,7 +6,7 @@ To keep things simple, we consider an example with only three questions. The und
 
 ### FSM diagram
 
-Our system consists of five sequential stages: 
+Our system consists of five stages, which run in sequential order:
 - initial stage
 - three question stages
 - final stage
