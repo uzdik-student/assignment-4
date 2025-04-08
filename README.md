@@ -6,7 +6,7 @@ For simplicity, we look at example with only 3 questions.
 
 ### FSM diagram
 
-![alt text](src/main/fsm.png)
+![alt text](fsm.png)
 
 ### Truth table
 
