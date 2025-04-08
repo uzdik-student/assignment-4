@@ -1,8 +1,14 @@
 # assignment-4-console
 
-### Truth table
+## Finite-state machine
 
 For simplicity, we look at example with only 3 questions.
+
+### FSM diagram
+
+![alt text](src/main/fsm.png)
+
+### Truth table
 
 We define variables:
 - Input (Q1 to Q3) → T if answer for question i is Yes, else F
