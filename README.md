@@ -1,17 +1,23 @@
 # assignment-4-console
 
-## Truth table
+### Truth table
 
-| Q1  | Q2  | Q3  | Answer |
-|:---:|:---:|:---:|:------:|
-| No  | No  | No  |   0    |
-| No  | No  | Yes |   1    |
-| No  | Yes | No  |   2    |
-| No  | Yes | Yes |   3    |
-| Yes | No  | No  |   4    |
-| Yes | No  | Yes |   5    |
-| Yes | Yes | No  |   6    |
-| Yes | Yes | Yes |   7    |
+For simplicity, we look at example with only 3 questions.
+
+We define variables:
+- Input (Q1 to Q3) → T if answer for question i is Yes, else F
+- Output (G0 to G7) → T if guessing that hidden number was i, else F
+
+| Q1 | Q2 | Q3 | G0 | G1 | G2 | G3 | G4 | G5 | G6 | G7 |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| F  | F  | F  | T  | F  | F  | F  | F  | F  | F  | F  |
+| F  | F  | T  | F  | T  | F  | F  | F  | F  | F  | F  |
+| F  | T  | F  | F  | F  | T  | F  | F  | F  | F  | F  |
+| F  | T  | T  | F  | F  | F  | T  | F  | F  | F  | F  |
+| T  | F  | F  | F  | F  | F  | F  | T  | F  | F  | F  |
+| T  | F  | T  | F  | F  | F  | F  | F  | T  | F  | F  |
+| T  | T  | F  | F  | F  | F  | F  | F  | F  | T  | F  |
+| T  | T  | T  | F  | F  | F  | F  | F  | F  | F  | T  |
 
 Command:
 ```
