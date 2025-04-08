@@ -2,7 +2,7 @@
 
 ## Finite-state machine
 
-For simplicity, we look at example with only 3 questions.
+To keep things simple, we consider an example with only three questions. The underlying logic remains consistent for any number of questions.
 
 ### FSM diagram
 
