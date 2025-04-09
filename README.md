@@ -1,4 +1,4 @@
-# assignment-4-console
+# assignment-4
 
 ## Finite-state machine
 
