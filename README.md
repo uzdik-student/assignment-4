@@ -17,9 +17,9 @@ Our system consists of five stages, which run in sequential order:
 
 We define variables:
 - Input (Q1 to Q3) → T if answer for question i is Yes, else F
-- Output (G0 to G7) → T if guessing that hidden number was i, else F
+- Output (A0 to A7) → T if answer for hidden number is i, else F
 
-| Q1 | Q2 | Q3 | G0 | G1 | G2 | G3 | G4 | G5 | G6 | G7 |
+| Q1 | Q2 | Q3 | A0 | A1 | A2 | A3 | A4 | A5 | A6 | A7 |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | F  | F  | F  | T  | F  | F  | F  | F  | F  | F  | F  |
 | F  | F  | T  | F  | T  | F  | F  | F  | F  | F  | F  |
