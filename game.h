@@ -1,6 +1,5 @@
 #ifndef GAME_H
 #define GAME_H
-#include <QVBoxLayout>
 #include <cassert>
 
 class State;
@@ -8,15 +7,11 @@ class State;
 class Game
 {
 private:
-    QVBoxLayout *layout;
-    State* m_pCurrentState;
     int m_answer;
     int m_bit;
 public:
-    Game(QVBoxLayout *layout);
+    Game();
 
-    void Update();
-    void ChangeState(State* new_state);
     void SetLeastSignificantBit(const int bit);
     void UnsetLeastSignificantBit(const int bit);
     int CurrentBit()const{return m_bit;}

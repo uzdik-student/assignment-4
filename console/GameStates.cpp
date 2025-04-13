@@ -8,52 +8,52 @@ using std::cout;
 using std::endl;
 
 
-//--------------------------------------methods for GuessNumber
+//--------------------------------------methods for InitialState
 
-GuessNumber* GuessNumber::Instance()
+InitialState* InitialState::Instance()
 {
-  static GuessNumber instance;
+  static InitialState instance;
 
   return &instance;
 }
 
-void GuessNumber::Enter(Game* pGame)
+void InitialState::Enter(Game* pGame)
 {
   system("clear");
 }
 
 
-void GuessNumber::Execute(Game* pGame)
+void InitialState::Execute(Game* pGame)
 {
   cout << "Think of a number between 0 and 63, but don't tell me 🤫" << endl;
   cout << "I’ll try to guess it 👀" << endl << endl;
   pGame->ResetBit();
-  pGame->ChangeState(ShowFirstBit::Instance());
+  pGame->ChangeState(QuestionState::Instance());
 }
 
 
-void GuessNumber::Exit(Game* pGame)
+void InitialState::Exit(Game* pGame)
 {
   system("read -p 'Press ENTER when you are ready to play...'");
 }
 
-//--------------------------------------methods for ShowFirstBit
+//--------------------------------------methods for QuestionState
 
-ShowFirstBit* ShowFirstBit::Instance()
+QuestionState* QuestionState::Instance()
 {
-  static ShowFirstBit instance;
+  static QuestionState instance;
 
   return &instance;
 }
 
-void ShowFirstBit::Enter(Game* pGame)
+void QuestionState::Enter(Game* pGame)
 {
   system("clear");
   cout << "Round " << pGame->CurrentBit() + 1 << endl;
 }
 
 
-void ShowFirstBit::Execute(Game* pGame)
+void QuestionState::Execute(Game* pGame)
 {
   cout << "Do you see your number in this list? 👀" << endl;
   for (int i=0; i<64; i++) {
@@ -66,7 +66,7 @@ void ShowFirstBit::Execute(Game* pGame)
 }
 
 
-void ShowFirstBit::Exit(Game* pGame)
+void QuestionState::Exit(Game* pGame)
 {
   cout << endl;
 }
@@ -102,7 +102,7 @@ void WaitingForUserInput::Execute(Game* pGame)
   if (pGame->FinalBit()) {
     pGame->ChangeState(FinalState::Instance());
   } else {
-    pGame->ChangeState(ShowFirstBit::Instance());
+    pGame->ChangeState(QuestionState::Instance());
   }
 }
 
@@ -130,7 +130,7 @@ void FinalState::Enter(Game* pGame)
 
 void FinalState::Execute(Game* pGame)
 {
-  pGame->ChangeState(GuessNumber::Instance());
+  pGame->ChangeState(InitialState::Instance());
 }
 
 

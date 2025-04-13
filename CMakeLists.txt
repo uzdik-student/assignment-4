@@ -14,7 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
+
         mainwindow.h
         mainwindow.ui
 )
@@ -23,10 +23,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(assignment-4-qt
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        question.h question.cpp question.ui
-        game.h game.cpp
+
+
         State.h
-        gamestates.h gamestates.cpp
+        mainwindow.cpp
+        game.h game.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET assignment-4-qt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

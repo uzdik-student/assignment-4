@@ -8,22 +8,22 @@ class Game;
 
 //------------------------------------------------------------------------
 //
-//  Todo: guess number description
+//  Initial state of the game, where user need to hide number
 //------------------------------------------------------------------------
-class GuessNumber : public State
+class InitialState : public State
 {
 private:
 
-  GuessNumber(){}
+  InitialState(){}
 
   //copy ctor and assignment should be private
-  GuessNumber(const GuessNumber&);
-  GuessNumber& operator=(const GuessNumber&);
+  InitialState(const InitialState&);
+  InitialState& operator=(const InitialState&);
 
 public:
 
   //this is a singleton
-  static GuessNumber* Instance();
+  static InitialState* Instance();
   
   virtual void Enter(Game* game);
 
@@ -34,22 +34,22 @@ public:
 
 //------------------------------------------------------------------------
 //
-//  Todo: first state description
+//  Question state, where user is being asked a question
 //------------------------------------------------------------------------
-class ShowFirstBit : public State
+class QuestionState : public State
 {
 private:
 
-  ShowFirstBit(){}
+  QuestionState(){}
 
   //copy ctor and assignment should be private
-  ShowFirstBit(const ShowFirstBit&);
-  ShowFirstBit& operator=(const ShowFirstBit&);
+  QuestionState(const QuestionState&);
+  QuestionState& operator=(const QuestionState&);
 
 public:
 
   //this is a singleton
-  static ShowFirstBit* Instance();
+  static QuestionState* Instance();
   
   virtual void Enter(Game* game);
 
@@ -60,7 +60,7 @@ public:
 
 //------------------------------------------------------------------------
 //
-//  Todo: waiting for user state description
+//  Answer state, where user inputs Yes or No
 //------------------------------------------------------------------------
 class WaitingForUserInput : public State
 {
@@ -86,7 +86,7 @@ public:
 
 //------------------------------------------------------------------------
 //
-//  Todo: final state description
+//  Final state, where answer is revealed
 //------------------------------------------------------------------------
 class FinalState : public State
 {
