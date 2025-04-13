@@ -1,7 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "question.h"
-#include "game.h"
 #include <QLabel>
 #include <QPushButton>
 #include <QDialogButtonBox>
@@ -13,12 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QVBoxLayout *layout = ui->verticalLayout;
-
     // Create the Game object and pass the layout to it
-    game = new Game(layout);
-    // game->Update();
-
+    game = new Game();
 
     initialState();
 }
@@ -156,4 +150,3 @@ void MainWindow::onRestartButtonClicked()
     clearLayout();
     initialState();
 }
-

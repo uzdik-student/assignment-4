@@ -1,7 +1,7 @@
 #include "Game.h"
 #include "GameStates.h"
 
-Game::Game():m_pCurrentState(GuessNumber::Instance()),
+Game::Game():m_pCurrentState(InitialState::Instance()),
                      m_answer(0),
                      m_bit(0)
                                                                   

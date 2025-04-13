@@ -15,8 +15,7 @@ public:
   //this is the state's normal update function
   virtual void Execute(Game*)=0;
 
-  //this will execute when the state is exited. (My word, isn't
-  //life full of surprises... ;o))
+  //this will execute when the state is exited
   virtual void Exit(Game*)=0;
 
 };
